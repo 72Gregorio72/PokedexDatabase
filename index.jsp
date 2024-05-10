@@ -53,9 +53,9 @@
 <%
     Connection connection = null;
     try {
-        String url = "jdbc:mysql://localhost:3306/pokemondb";
-        String username = "root";
-        String password = "";
+        String url = "jdbc:mysql://sql8.freesqldatabase.com:3306/sql8705674";
+        String username = "sql8705674";
+        String password = "WKRpjTTnyY";
         connection = DriverManager.getConnection(url, username, password);
     } catch (SQLException e) {
         e.printStackTrace();
