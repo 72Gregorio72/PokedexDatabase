@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.util.List" %>
 <%@ page import="java.sql.Connection" %>
@@ -11,7 +10,7 @@
 <%@ page import="java.awt.*" %>
 <%@ page import="java.sql.DriverManager" %>
 <%@ page import="java.sql.SQLException" %>
-
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -290,7 +289,7 @@
 <%
     Connection connection = null;
     try {
-        String url = "jdbc:mysql://sql8.freesqldatabase.com:3306/sql8705674";
+        String url = "jdbc:mysql://sql8.freesqldatabase.com:3306/sql8705674?useUnicode=true&characterEncoding=UTF-8";
         String username = "sql8705674";
         String password = "WKRpjTTnyY";
         connection = DriverManager.getConnection(url, username, password);
