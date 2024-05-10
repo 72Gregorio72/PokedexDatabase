@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function() {
+            // Crea un modulo nascosto
+            var form = document.createElement('form');
+            form.method = 'POST';
+            form.action = 'index.jsp'; // Indirizzo di destinazione
+
+            // Aggiungi campi dati nascosti al modulo
+            var searchNameField = document.createElement('input');
+            searchNameField.type = 'hidden';
+            searchNameField.name = 'searchName';
+            searchNameField.value = ''; // Inserisci il valore di searchName qui
+            form.appendChild(searchNameField);
+
+            var searchTypeField = document.createElement('input');
+            searchTypeField.type = 'hidden';
+            searchTypeField.name = 'searchType';
+            searchTypeField.value = ''; // Inserisci il valore di searchType qui
+            form.appendChild(searchTypeField);
+
+            var genField = document.createElement('input');
+            genField.type = 'hidden';
+            genField.name = 'gen';
+            genField.value = ''; // Inserisci il valore di gen qui
+            form.appendChild(genField);
+
+            var ordNameField = document.createElement('input');
+            ordNameField.type = 'hidden';
+            ordNameField.name = 'OrdName';
+            ordNameField.value = '-1'; // Valore di OrdName
+            form.appendChild(ordNameField);
+
+            var ordTotField = document.createElement('input');
+            ordTotField.type = 'hidden';
+            ordTotField.name = 'OrdTot';
+            ordTotField.value = '-1'; // Valore di OrdTot
+            form.appendChild(ordTotField);
+
+            // Aggiungi il modulo alla pagina e invialo
+            document.body.appendChild(form);
+            form.submit();
+        };
+    </script>
+</head>
+<body>
+
+</body>
+</html>

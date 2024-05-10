@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            background-image: url("TypeBackground/backgroundPokeballs.jpg");
+            background-size: auto;
+        }
+        .container {
+            margin: 50px auto;
+            text-align: center;
+        }
+        .input-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .pokedexHolder{
+            background-image: url("PokemonChips/pokedexBG.png");
+            background-size: cover;
+            width: 500px;
+            height: 630px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .inputGetter{
+            background-color: transparent;
+            border: transparent;
+            margin-top: 465px;
+            font-size: 40px;
+            margin-left: 100px;
+        }
+        .inputGetter:focus {
+            outline: none;
+        }
+        .inputGetter {
+                background-color: transparent;
+                border: transparent;
+                margin-top: 465px;
+                font-size: 40px;
+                margin-left: 100px;
+                color: black; /* Add this line to set the text color to white */
+            }
+        
+    </style>
+</head>
+<body>
+    <div style="position: absolute; top: 0; left: 0;">
+        <button style="width: 300px; height: 100px; border: none; background-color: transparent;">
+            <a href="index.html">
+                <img src="PokemonChips/pokemonLogo.png" alt="pokedex background" style="max-width: 100%; max-height: 100%; background-color: transparent;">
+            </a>
+    </div>
+<div class="container">
+    <form action="pokemonConfronto.jsp" method="post">
+        <div class="input-container">
+            <div style="display: flex; flex-direction: row; justify-content: center;">
+                <div class="pokedexHolder">
+                    <img src="PokemonChips/questionMark.png" alt="" style="width: 100px; height: 100px; margin-top: -470px; margin-left: -350px; position: absolute">
+                    <input type="text" name="searchName1" placeholder="Pokemon 1 Name" required class="inputGetter">
+                </div>
+                <div class="pokedexHolder" style="margin-left: 300px;">
+                    <img src="PokemonChips/questionMark.png" alt="" style="width: 100px; height: 100px; margin-top: -470px; margin-left: -350px; position: absolute">
+                    <input type="text" name="searchName2" placeholder="Pokemon 2 Name" required class="inputGetter">
+                </div>
+            </div>
+        </div>
+        <button type="submit" onmouseover="changeImage()" onmouseout="restoreImage()" style="border: 10px black; width: 300px; height: 100px; border-radius: 10px;">
+            <p style="font-size: 40px; margin-top: 30px">Confronta</p>
+        </button>
+    </form>
+</div>
+</body>
+
+<script>
+    function changeImage() {
+        document.getElementById('pokeballImg').src = 'PokemonChips/pokeball_red.png';
+    }
+
+    function restoreImage() {
+        document.getElementById('pokeballImg').src = 'PokemonChips/pokeball.png';
+    }
+</script>
+
+</html>
